@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  background: #ffffff;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+header h1 {
+  margin-left: 50px;
+  font-size: 1.6rem; 
+  color: #3b3b3b;
+  font-weight: 700;
+}
+
+nav {
+  text-align: right;
+  margin-right: 50px; /* ← 여기를 조정하면 메뉴 전체 위치가 움직임 */
+}
+
+nav a {
+  transform: translateX(-60px);
+  margin: 14px;
+  text-decoration: none;
+  color: #3b3b3b;
+  font-weight: semibold;
+  font-size: 1.5rem;
+  font-weight: 700
+}
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+  color: #848484; /* 클릭 시 색상 강조 */
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #848484;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a:focus::after,
+nav a:active::after {
+  width: 100%;
+}
+
+/* CSS: style.css 또는 <style> 태그 안 */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 62%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: #3b3b3b;
+  text-align: left;
+}
+
+.hero-text h2 {
+  font-size: 2.7rem;
+  font-weight: 600;
+  line-height: 0.6;
+  font-weight: 700;
+}
+.hero-text .greeting {
+  font-size: 2rem;         /* 반갑습니다. */
+  font-weight: 700;
+  margin: 0;
+}
+
+.hero-text .portfolio-title {
+  font-size: 3.2rem;       /* 최다움의 Portfolio */
+  font-weight: 700;
+  margin: 0;
+}
+
+.hero-text em {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.hero-text h2,
+.portfolio-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 🔸 부드러운 그림자 */
+}
+
+.about-img {
+  width: 100%;
+  max-width: 1500px;
+  display: block;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+
+#about {
+  background: #fffbf0;
+  padding: 10px 10px;
+}
+
+.ability-img {
+  width: 100%;
+  max-width: 1400px;
+  display: block;
+  margin: 40px auto;
+  border-radius: 10px;
+}
+
+
+#ability {
+  padding: 50px 30px;
+}
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+#work {
+  width: 100%;
+  text-align: center;
+  background: #fffbf0;
+  padding: 100px 0;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.work-grid button {
+  padding: 40px;
+  font-size: 1rem;
+  border: none;
+  background: #7d88a4;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#contact {
+  padding: 60px 30px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.social-icons img {
+  width: 32px;
+  margin-left: 10px;
+}
