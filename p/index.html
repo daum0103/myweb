@@ -39,36 +39,56 @@
   </section>
 
   <section id="ability">
-    <section id="ability-image">
-  <img src="ab.jpg" alt="Ability 시각화 이미지" class="ability-img">
+  <section id="ability-image">
+    <img src="ab.jpg" alt="Ability 시각화 이미지" class="ability-img">
+  </section>
 </section>
 
 
   <section id="work">
-    <h2>Work</h2>
-    <p>클릭하면 더 자세히 볼 수 있습니다.</p>
-    <div class="work-grid">
-      <button onclick="openPopup('콘텐츠')">콘텐츠</button>
-      <button onclick="openPopup('프로젝트')">프로젝트</button>
-      <button onclick="openPopup('개인 작업')">개인 작업</button>
-      <button onclick="openPopup('공모전')">공모전</button>
-    </div>
-  </section>
+  <h2>Work</h2>
+  <p>클릭하면 더 자세히 볼 수 있습니다.</p>
+  <div class="work-grid">
+    <img src="c.png" alt="콘텐츠" class="work-img" onclick="openPopup('콘텐츠 작업입니다.')" />
+    <img src="p.png" alt="프로젝트" class="work-img" onclick="openPopup('프로젝트 작업입니다.')" />
+    <img src="gw.png" alt="개인 작업" class="work-img" onclick="openPopup('개인 작업입니다.')" />
+    <img src="g.png" alt="공모전" class="work-img" onclick="openPopup('공모전 참여작입니다.')" />
+  </div>
 
-  <section id="contact">
-    <div class="contact-container">
-      <div class="info">
-        <h2>Contact</h2>
-        <p>010-5911-5862<br>daum0103@naver.com<br>@daumedaa</p>
+  <!-- 팝업창 -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <div class="popup-slider">
+      <div class="slides">
+        <div class="slide active">
+          <img src="dr.jpg" alt="슬라이드1" />
+          <p class="link"><a href="https://youtu.be/HQo2uY4uGQo" target="_blank">내 드라마 다움 바로가기</a></p>
+          <p class="desc">[라디오] 드라마&영화 소개 콘텐츠 (ep 1~6)</p>
+        </div>
+        <div class="slide">
+          <img src="m.jpg" alt="슬라이드2" />
+          <p class="link"><a href="https://youtu.be/DOsqU9ta5Go" target="_blank">에드가 드가 바로가기</a></p>
+          <p class="desc">[미디어아트] 에드가 드가</p>
+        </div>
+        <div class="slide">
+          <img src="dq.jpg" alt="슬라이드3" />
+          <p class="link"><a href="https://youtu.be/3IOw3gV96fw" target="_blank">건강하게 인사하기 바로가기</a></p>
+          <p class="desc">[다큐멘터리] 반려동물과 이별을 준비하는 사람들의 이야기</p>
+        </div>
       </div>
-      <div class="social-icons">
-        <img src="icons/blog.png">
-        <img src="icons/youtube.png">
-        <img src="icons/instagram.png">
-        <img src="icons/x.png">
-      </div>
+
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
-  </section>
+  </div>
+</div>
+</section>
+
+
+<section id="contact">
+  <img src="contact.jpg" alt="Contact Section" class="contact-img" />
+</section>
 
   <script src="script.js"></script>
 </body>

@@ -155,43 +155,157 @@ nav a:active::after {
 }
 
 #work {
-  width: 100%;
+  background: #fffbf0;        /* 연노란색 배경 */
+  padding: 105px 0;
   text-align: center;
-  background: #fffbf0;
-  padding: 100px 0;
+  width: 100%;
+}
+
+#work h2 {
+  font-size: 2.1rem;           /* 제목 크기 크게 */
+  margin-bottom: 5px;;
+  color: #353535;
+  font-weight: semibold;
+}
+
+#work p {
+  font-size: 1.5rem;           /* 설명 크기 키움 */
+  margin-bottom: 85px;
+  color: #353535;
+  font-weight: 500; /* 폰트 두께 추가 */
 }
 
 .work-grid {
+  background: #fffbf0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
   max-width: 1000px;
-  margin: 0 auto;
-  padding: 0;
+  margin: 40px auto;
 }
 
-.work-grid button {
-  padding: 40px;
-  font-size: 1rem;
-  border: none;
-  background: #7d88a4;
-  color: white;
-  border-radius: 15px;
+.work-img {
+  width: 98%;
   cursor: pointer;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  margin: 0 auto;  
+}
+
+.work-img:hover {
+  transform: scale(1.02);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.popup-content {
+  position: relative;
+  background-color: white;
+  margin: 8% auto;
+  padding: 50px;
+  width: 60%;
+  max-width: 900px;
+  min-height: 400px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #242424;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+}
+
+.popup-slider {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.slides {
+  position: relative;
+  overflow: hidden;
+}
+.slide {
+  display: none;
+  text-align: center;
+}
+.slide.active {
+  display: block;
+}
+.slide img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.slide .link a {
+  font-size: 1rem;
+  color: #0077cc;
+  text-decoration: underline;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 4px; /* 간격 줄이기 핵심 포인트! */
+}
+
+.slide .desc {
+  font-size: 1.1rem;
+  margin-top: 3px;
+  color: #444;
+}
+button.prev,
+button.next {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+.prev {
+  left: -35px;
+}
+.next {
+  right: -35px;
 }
 
 #contact {
-  padding: 60px 30px;
-}
-
-.contact-container {
+  width: 100%;
+  background-color: #ffffff;
+  background-color: transparent;  /* 연노란 배경 제거 */
+  margin: 0;
+  padding: 40px 0 0;  /* 위에만 여백 주기 (작업물과 거리 두기) */
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* 이미지 아래쪽으로 */
 }
 
-.social-icons img {
-  width: 32px;
-  margin-left: 10px;
+.contact-img {
+  width: 120%;
+  max-width: 1500px;  /* 너비 제한 주고 싶을 때 */
+  height: auto;
+  display: block;
+  margin: 0px auto;    /* 이미지 아래 여백 */
+}
+
+body::after {
+  content: '';
+  display: block;
+  height: 0;
+  background: none;
 }

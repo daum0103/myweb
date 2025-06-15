@@ -11,18 +11,30 @@ window.addEventListener('scroll', () => {
   }
 });
 
-function openPopup(title) {
-  const width = 500;
-  const height = 400;
-  const left = (window.screen.width - width) / 2;
-  const top = (window.screen.height - height) / 2;
-  const popup = window.open('', title, `width=${width},height=${height},top=${top},left=${left}`);
-  popup.document.write(`
-    <html><head><title>${title}</title></head>
-    <body style="margin:0;display:flex;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;">
-      <h2>${title} 상세 내용</h2>
-    </body></html>
-  `);
+let currentSlide = 0;
+
+function openPopup() {
+  document.getElementById('popup').style.display = 'block';
+  showSlide(currentSlide);
 }
 
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+function showSlide(index) {
+  const slides = document.querySelectorAll('.slide');
+  if (index >= slides.length) currentSlide = 0;
+  else if (index < 0) currentSlide = slides.length - 1;
+  else currentSlide = index;
+
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === currentSlide) slide.classList.add('active');
+  });
+}
+
+function changeSlide(direction) {
+  showSlide(currentSlide + direction);
+}
 
