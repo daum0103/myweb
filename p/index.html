@@ -6,7 +6,6 @@
   <title>다움's Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
-
 </head>
 <body>
   <header>
@@ -21,74 +20,130 @@
   </header>
 
   <section id="home" class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="pf.mp4" type="video/mp4">
-  </video>
-  <div class="hero-text">
-    <h2>반갑습니다.</h2>
-    <h2 class="portfolio-title">최다움의 <em>Portfolio</em></h2>
-  </div>
-</section>
+    <video autoplay muted loop playsinline>
+      <source src="pf.mp4" type="video/mp4">
+    </video>
+    <div class="hero-text">
+      <h2>반갑습니다.</h2>
+      <h2 class="portfolio-title">최다움의 <em>Portfolio</em></h2>
+    </div>
+  </section>
 
   <section id="about">
     <section id="about-image">
-  <img src="about.jpg" alt="About 전체 이미지" class="about-img">
-</section>
-
-
+      <img src="about.jpg" alt="About 전체 이미지" class="about-img">
+    </section>
   </section>
 
   <section id="ability">
-  <section id="ability-image">
-    <img src="ab.jpg" alt="Ability 시각화 이미지" class="ability-img">
+    <section id="ability-image">
+      <img src="ab.jpg" alt="Ability 시각화 이미지" class="ability-img">
+    </section>
   </section>
-</section>
-
 
   <section id="work">
-  <h2>Work</h2>
-  <p>클릭하면 더 자세히 볼 수 있습니다.</p>
-  <div class="work-grid">
-    <img src="c.png" alt="콘텐츠" class="work-img" onclick="openPopup('콘텐츠 작업입니다.')" />
-    <img src="p.png" alt="프로젝트" class="work-img" onclick="openPopup('프로젝트 작업입니다.')" />
-    <img src="gw.png" alt="개인 작업" class="work-img" onclick="openPopup('개인 작업입니다.')" />
-    <img src="g.png" alt="공모전" class="work-img" onclick="openPopup('공모전 참여작입니다.')" />
-  </div>
+    <h2>Work</h2>
+    <p>클릭하면 더 자세히 볼 수 있습니다.</p>
+    <div class="work-grid">
+      <img src="c.png" alt="콘텐츠" class="work-img" onclick="openPopup('content')" />
+      <img src="p.png" alt="프로젝트" class="work-img" onclick="openPopup('project')" />
+      <img src="gw.png" alt="개인 작업" class="work-img" onclick="openPopup('personal')" />
+      <img src="g.png" alt="공모전" class="work-img" onclick="openPopup('contest')" />
+    </div>
 
-  <!-- 팝업창 -->
-  <div id="popup" class="popup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()">&times;</span>
-      <div class="popup-slider">
-      <div class="slides">
-        <div class="slide active">
-          <img src="dr.jpg" alt="슬라이드1" />
-          <p class="link"><a href="https://youtu.be/HQo2uY4uGQo" target="_blank">내 드라마 다움 바로가기</a></p>
-          <p class="desc">[라디오] 드라마&영화 소개 콘텐츠 (ep 1~6)</p>
-        </div>
-        <div class="slide">
-          <img src="m.jpg" alt="슬라이드2" />
-          <p class="link"><a href="https://youtu.be/DOsqU9ta5Go" target="_blank">에드가 드가 바로가기</a></p>
-          <p class="desc">[미디어아트] 에드가 드가</p>
-        </div>
-        <div class="slide">
-          <img src="dq.jpg" alt="슬라이드3" />
-          <p class="link"><a href="https://youtu.be/3IOw3gV96fw" target="_blank">건강하게 인사하기 바로가기</a></p>
-          <p class="desc">[다큐멘터리] 반려동물과 이별을 준비하는 사람들의 이야기</p>
+    <!-- 팝업창 -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <div class="popup-slider">
+
+          <!-- 콘텐츠 슬라이드 -->
+          <div class="slides category-content">
+            <div class="slide active">
+              <img src="dr.jpg" alt="슬라이드1" />
+              <p class="link"><a href="https://youtu.be/HQo2uY4uGQo" target="_blank">내 드라마 다움 바로가기</a></p>
+              <p class="desc">[라디오] 드라마&영화 소개 콘텐츠 (ep 1~6)</p>
+            </div>
+            <div class="slide">
+              <img src="m.jpg" alt="슬라이드2" />
+              <p class="link"><a href="https://youtu.be/DOsqU9ta5Go" target="_blank">에드가 드가 바로가기</a></p>
+              <p class="desc">[미디어아트] 에드가 드가</p>
+            </div>
+            <div class="slide">
+              <img src="dq.jpg" alt="슬라이드3" />
+              <p class="link"><a href="https://youtu.be/3IOw3gV96fw" target="_blank">건강하게 인사하기 바로가기</a></p>
+              <p class="desc">[다큐멘터리] 반려동물과 이별을 준비하는 사람들의 이야기</p>
+            </div>
+          </div>
+
+          <!-- 프로젝트 슬라이드 -->
+          <div class="slides category-project" style="display: none;">
+            <div class="slide active">
+              <img src="p1.jpg" />            
+              <p class="link"><a href="https://youtu.be/7VzZoffS4IU?si=oV-ufY73Q8XTk18X" target="_blank">미디어콘텐츠학과 홍보영상 바로가기</a></p>
+              <p class="desc">[공삼사이] 미디어콘텐츠학과 홍보영상</p>
+            </div>
+            <div class="slide">
+              <img src="p2.jpg" />            
+              <p class="link"><a href="https://youtu.be/2nlU398W32E?si=62YR-1azXoUIs2o5" target="_blank">검수사 직업 홍보영상 바로가기</a></p>
+              <p class="desc">[지역사회 프로젝트] 검수사 직업 홍보영상</p>
+            </div>
+            <div class="slide">
+              <img src="p3.jpg" />              
+              <p class="link"><a href="https://youtu.be/6A7QUsDacyU?si=I4zxVcRSkKCgIXC8" target="_blank">구포나루축제 홍보영상 바로가기</a></p>
+              <p class="desc">[지역사회 프로젝트] 구포나루축제 홍보영상</p>
+            </div>
+          </div>
+
+          <!-- 개인 작업 슬라이드 -->
+          <div class="slides category-personal" style="display: none;">
+            <div class="slide active">
+              <img src="g1.jpg" />            
+              <p class="link"><a href=https://youtu.be/Fu5abPg-6TA" target="_blank">특이점이 온 언박싱 라이브 바로가기</a></p>
+              <p class="desc">[유튜브] 템페스트 시그 언박싱 라이브</p>
+            </div>
+            <div class="slide">
+              <img src="g2.jpg" />              
+              <p class="link"><a href="https://youtu.be/X8UNEBVGaRg?si=MX8TkaH344V2jdXd" target="_blank">사이보그 기지 바로가기</a></p>
+              <p class="desc">[C4D] 사이보그 기지</p>
+            </div>
+            <div class="slide">
+              <img src="g3.jpg" />
+              <p class="link"><a  target="_blank">공삼사이 홍보 포스터 디자인</a></p>
+              <p class="desc">[공삼사이] 홍보 포스터</p>
+             
+            </div>
+          </div>
+
+          <!-- 공모전 슬라이드 -->
+          <div class="slides category-contest" style="display: none;">
+            <div class="slide active">
+              <img src="m1.jpg" />              
+              <p class="link"><a href="https://youtu.be/ARPVIZURIUQ" target="_blank">구화지문 (口禍之門)을 찾아보자! 바로가기</a></p>
+              <p class="desc">[공모전] 2024 한자공모전 수상작</p>
+            </div>
+            <div class="slide">
+              <img src="m2.jpg" />              
+              <p class="link"><a href="https://youtu.be/gAJSVjxiVBY" target="_blank">우리 등대 보러갈래? 바로가기</a></p>
+              <p class="desc">[공모전] 2024 등대공모전</p>
+            </div>
+            <div class="slide">
+              <img src="m3.jpg" />              
+              <p class="link"><a href="https://youtu.be/FQxYeCK2UL4" target="_blank">부산의 아름다움 바로가기</a></p>
+              <p class="desc">[공모전] 2024 부산영상공모전</p>
+            </div>
+          </div>
+
+          <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="next" onclick="changeSlide(1)">&#10095;</button>
         </div>
       </div>
-
-      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-      <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
-  </div>
-</div>
-</section>
+  </section>
 
-
-<section id="contact">
-  <img src="contact.jpg" alt="Contact Section" class="contact-img" />
-</section>
+  <section id="contact">
+    <img src="contact.jpg" alt="Contact Section" class="contact-img" />
+  </section>
 
   <script src="script.js"></script>
 </body>
